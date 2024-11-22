@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -26,11 +27,15 @@ export default function Home() {
         <button className="px-4 py-2 bg-blue-500 text-white rounded-md ml-4">Search</button>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {posts.map((post) =>(<div className="border border-gray-200 p-4">
+        {posts.map((post) =>(
+          <Link href={"/post/" + post._id}>
+          <div className="border border-gray-200 p-4">
           <img className="w-full h-48 object-cover mb-4" src={post.image} alt="Post Image" />
           <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
           <p className="text-gray-600">{post.short_description}</p>
-        </div>))
+        </div>
+        </Link>
+        ))
         }
       </div>
       </>
