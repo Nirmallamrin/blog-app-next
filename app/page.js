@@ -47,7 +47,7 @@ export default function Home() {
         {posts.map((post) =>(
           <Link href={"/post/" + post._id} key={post._id}>
           <div className="border border-gray-200 p-4">
-          <Image className="w-full h-48 object-cover mb-4" src={post.image} alt="Post Image" />
+          <img className="w-full h-48 object-cover mb-4" src={post.image} alt="Post Image" />
           <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
           <p className="text-gray-600">{post.short_description}</p>
         </div>
