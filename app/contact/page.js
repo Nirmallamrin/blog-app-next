@@ -2,8 +2,8 @@
 import Contact from "../../components/Contact"
 
 export const metadata = {
-    title: "About Us Page",
-    description: "About Page description here"
+    title: "Contact Page",
+    description: "Contact Page description here"
 }
 
 export default function ContactPage() {
