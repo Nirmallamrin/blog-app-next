@@ -24,7 +24,7 @@ export default function Home() {
     setSearch(true);
     // setTimeout(() => {
       fetch(process.env.NEXT_PUBLIC_API +"/posts?q=" + inputRef.current.value)
-      .then((res) =>res.json())
+      .then((res) => res.json())
       .then((res) => setPosts(res))
       .finally(() => setSearch(false))
     // }, 1000)
